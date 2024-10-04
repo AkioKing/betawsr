@@ -1,0 +1,135 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+}
+h2z {
+	color: red;
+	padding: 20px 0;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-image: url("back.png"); /* Нежный бежевый фон */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #dfb989; /* Светлый бежевый цвет */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #e9dcb5ad; /* Светлый кремовый фон */
+    padding: 40px 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.button {
+    background-color: #c2ab8f; /* Нежно-коричневый */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #b5937b; /* Более насыщенный коричневый */
+    transform: translateY(-2px);
+}
+
+.featured-products {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.product-card {
+    margin: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: calc(30% - 20px);
+    text-align: center;
+    background-color: #e9dcb5ad; /* Белый фон для карточек */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Скругленные углы для изображений */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d7c49e;
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(45% - 20px); /* На мобильных устройствах две карточки в ряд */
+    }
+}
+
+@media (max-width: 500px) {
+    .product-card {
+        width: 100%; /* На мобильных устройствах одна карточка в ряд */
+    }
+}
+
